@@ -106,7 +106,7 @@ if (isset($_POST['login'])) {
                             </button>
                         </div>  
                         <div class="col-12 col-md-7">   
-                            <p><a href="change_passwrod.php">Forgot your password?</a></p>
+                            <p><a href="change_password.php">Forgot your password?</a></p>
                         </div>
                     </div>
                     <hr>
