@@ -1,0 +1,142 @@
+.row-header{
+	margin: 0px auto;
+	padding: 0px auto;
+}
+
+.row-content{
+	margin: 0px auto;
+	padding: 50px 0px 50px 0px;
+	border-bottom:1px ridge;
+	min-height: 400px; 
+}
+
+.footer{
+	background-color:#301934;
+	margin: 0px auto;
+	padding: 20px 0px 20px 0px;
+	color: floralwhite;
+}
+
+.jumbotron{
+	padding: 70px 30px 70px 30px;
+	margin: 0px auto;
+	background-color:#AF7AC5;
+	color: floralwhite;
+}
+
+.address{
+	font-size: 80%;
+	margin: 0px;
+	color: #0f0f0f;
+}
+
+body{
+	padding: 50px 0px 0px 0px;
+	z-index:0;
+    background-color:#E5E7E9;
+    
+}
+
+.card{
+	padding: 15px;
+	margin: 20px;
+}
+
+.navbar-dark{
+    background:#301934;
+}
+
+.carousel-item{
+	height: 300px;
+}
+
+.carousel-item img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 300px;
+}
+
+.alpa{
+	font-size: 30px;
+	
+}
+
+.navigation li a{
+  color:#7E57C2; 
+}
+
+.navigation li a:hover{
+  text-decoration:none;
+  color:#FFFFFF; 
+  
+}
+
+
+#signup:hover,#login:hover{
+	color:black;
+}
+
+
+.header{
+	font-family:jokerman;
+}
+
+#change_pw,#resetp,#signuph,#loginh,#signupb,#loginb{
+	background-color:#301934 ;
+}
+
+#resetp:hover,#signupb:hover,#loginb:hover{
+	background-color:#0275d8;
+}
+
+
+.pic{
+	height: 250px;
+	width: 250px;
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden;
+
+}
+
+#file{
+	position: absolute;
+	bottom:0;
+	outline: none;
+	color: transparent;
+	width: 100%;
+	box-sizing: border-box;
+	padding:5px 110px;
+	cursor: pointer;
+	transition: 0.5s;
+	background:rgba(0,0,0,0.7);
+	opacity: 0;
+}
+
+#file::-webkit-file-upload-button{
+	visibility: hidden;
+}
+
+#file::before{
+	content:'\f030';
+	font-family:fontAwesome;
+	font-size: 30px;
+	color: #fff;
+	display: inline-block;
+	-webkit-user-select:none;
+
+}
+
+#file::after{
+    content: 'Update';
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    top: 70px;
+
+}
+
+#file:hover{
+	opacity: 1;
+}
