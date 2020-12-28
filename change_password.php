@@ -1,3 +1,46 @@
+<?php 
+require_once "pdo.php";
+session_start();
+
+
+if(isset($_POST['change'])){
+
+    if(isset($_POST['email']) || isset($_POST['confirmPassword']) || isset($_POST['one_password']) ) {
+
+      $pw_one=$_POST['one_password'];
+      $pw_two=$_POST['confirmPassword'];
+      $p_email=$_POST['email'];
+  
+
+       if ($pw_one==$pw_two) {
+         
+         $sql = "UPDATE signup set password =:password where email =:eml";
+         $stmt = $pdo->prepare($sql);
+         $stmt -> bindParam(':password',$pw_one,PDO::PARAM_STR);
+         $stmt -> bindParam(':eml',$p_email,PDO::PARAM_STR);
+         $stmt->execute(); 
+         $_SESSION["success"]="Password Change Successfully";  
+         echo $_SESSION["success"];  
+     }
+
+       else{
+         $_SESSION["error"]="Please Enter Same Password";
+         echo $_SESSION["error"];
+     }
+
+}
+    else{
+        $_SESSION["error"]="Please Enter Details";
+        echo $_SESSION["error"];
+     }
+
+
+   
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
    <head>
