@@ -8,9 +8,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link href="css\style.css"  rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css\calender.css">
 	    <title>Happy Learn-Games-Calendar</title>
