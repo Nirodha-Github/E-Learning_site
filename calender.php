@@ -1,3 +1,11 @@
+<?php 
+require_once "pdo.php";
+session_start();
+if(isset($_SESSION['user_email'])){
+   $user_email=$_SESSION['user_email'];
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,22 +31,22 @@
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                         <li class="nav-item"><a class="nav-link" href="index.php"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Happy Learn/aboutus.php"><span class="fa fa-info fa-lg"></span> About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Happy Learn/videos.php"><span class="fa fa-play-circle fa-lg"></span> Videos</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="Happy Learn/games.php"><span class="fa fa-gamepad fa-lg"></span> Games</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Happy Learn/contactus.php"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutus.php"><span class="fa fa-info fa-lg"></span> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="videos.php"><span class="fa fa-play-circle fa-lg"></span> Videos</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="games.php"><span class="fa fa-gamepad fa-lg"></span> Games</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactus.php"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
 
 
                     <?php 
 
 
                       if (isset($user_email) && is_null($user_email)==false) {
-                        echo '<li class="nav-item"><a class="nav-link d-block d-sm-none" href="./Happy Learn/signup.php"><i class="fa fa-user-circle fa-lg"></i>Profile</a></li>';
-                        echo '<li class="nav-item"><a class="nav-link d-block d-sm-none" href="./Happy Learn/login.php"><i class="fa fa-user-circle-o fa-lg"></i></span> Log Out</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link d-block d-sm-none" href="./signup.php"><i class="fa fa-user-circle fa-lg"></i>Profile</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link d-block d-sm-none" href="./login.php"><i class="fa fa-user-circle-o fa-lg"></i></span> Log Out</a></li>';
                       }
                       else{
-                        echo '<li class="nav-item"><a class="nav-link d-block d-sm-none" href="./Happy Learn/profile.php"><i class="fa fa-user-circle fa-lg"></i> Signup</a></li>';
-                        echo '<li class="nav-item"><a class="nav-link d-block d-sm-none" href="./Happy Learn/logout.php"><i class="fa fa-user-circle-o fa-lg"></i></span> Login</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link d-block d-sm-none" href="./profile.php"><i class="fa fa-user-circle fa-lg"></i> Signup</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link d-block d-sm-none" href="./logout.php"><i class="fa fa-user-circle-o fa-lg"></i></span> Login</a></li>';
                     
                       }
 
@@ -1542,10 +1550,10 @@
                     <h5>Links</h5>
                     <ul class="list-unstyled navigation">
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="Happy Learn/aboutus.php">About</a></li>
-                        <li><a href="Happy Learn/videos.php">Videos</a></li>
-                        <li><a href="Happy Learn/games.php">Games</a></li>
-                        <li><a href="Happy Learn/contactus.php">Contact</a></li>
+                        <li><a href="aboutus.php">About</a></li>
+                        <li><a href="videos.php">Videos</a></li>
+                        <li><a href="games.php">Games</a></li>
+                        <li><a href="contactus.php">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-7 col-sm-5">
