@@ -5,7 +5,18 @@ session_start();
 if(isset($_POST['submit']) ) {
 
  // Data validation
-    if (strlen($_POST['firstname']) < 1 || strlen($_POST['lastname']) < 1 || strlen($_POST['password']) < 1 || strlen($_POST['phonenumber']) < 1 || strlen($_POST['confirm']) < 1 || strlen($_POST['email']) < 1) {
+    $email=$_POST['email'];    
+    $stmt = $pdo->prepare("SELECT * FROM signup WHERE email=?");
+    $stmt->execute([$email]); 
+    $user = $stmt->fetch();
+
+    if ($user) {
+        $_SESSION["error"]="This email has already registered.. login or use another email";
+    }
+	
+	
+	
+    else if (strlen($_POST['firstname']) < 1 || strlen($_POST['lastname']) < 1 || strlen($_POST['password']) < 1 || strlen($_POST['phonenumber']) < 1 || strlen($_POST['confirm']) < 1 || strlen($_POST['email']) < 1) {
         $_SESSION["error"] = 'Please,You should fill all fields';   
     }
 
