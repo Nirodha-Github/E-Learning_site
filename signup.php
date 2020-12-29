@@ -63,9 +63,7 @@ if(isset($_POST['submit']) ) {
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link  rel="stylesheet" href="css\style.css">
 	    <title>Happy Learn</title>
    </head>
@@ -145,6 +143,7 @@ if(isset($_POST['submit']) ) {
             </div>
                 <div class="col-md offset-md"></div>
          </div> 
-      </div> 
+      </div>    
    </body>
+	
 </html>
