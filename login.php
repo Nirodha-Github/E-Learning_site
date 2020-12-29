@@ -5,6 +5,17 @@ session_start();
 if (isset($_POST['login'])) {
    
   if (isset($_POST['check2'])) {
+    $email=$_POST['emaill'];    
+    $stmt = $pdo->prepare("SELECT * FROM signup WHERE email=?");
+    $stmt->execute([$email]); 
+    $user = $stmt->fetch();
+
+    if (!$user) {
+        $_SESSION["error"]="Your are not a registered member";
+      }
+  
+
+       
                     
     if(isset($_POST['emaill']) || isset($_POST['pass']) ) {
 
