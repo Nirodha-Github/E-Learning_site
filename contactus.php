@@ -268,7 +268,7 @@ if(isset($_POST['send'])){
                     <div class="form-group row">
                         <div class="offset-md-2 col-md-10">  
                           <a href="#msg" class="text-dark font-weight-bolder">
-                            <input type="submit"  value="Send Feedback" class="btn btn-warning" name="send" id="send"> 
+                            <input type="submit"  value="Send Feedback" class="btn btn-warning" name="send" id="send" onclick="window.location='#msg';"/> 
                           </a>            
                         </div>
                     </div>
