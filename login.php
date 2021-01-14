@@ -41,8 +41,10 @@ if (isset($_POST['login'])) {
        } 
       else {
 
+          $userid = $row['user_id'];
+          $_SESSION['currentid'] = $userid;
           $_SESSION['user_email']=$eml;
-          header('Location: index.php') ;
+          header('Location: index.php?id='.$userid) ;
           return;
     }
 
@@ -89,6 +91,11 @@ if (isset($_POST['login'])) {
                            }
     
                         ?> 
+                    </div>
+		    <div class="form-group row">
+                    
+                            <input type="hidden" name="userid" value="<?php echo $id; ?>">
+                       
                     </div>
                     <div class="form-group row">
                         <label for="emaill" class="col-12 col-md-5 col-form-label">Email</label>
