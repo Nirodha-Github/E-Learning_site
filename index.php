@@ -3,6 +3,7 @@ require_once "pdo.php";
 session_start();
 if(isset($_SESSION['user_email'])){
    $user_email=$_SESSION['user_email'];
+   $id = $_SESSION['currentid'];
 }
 
 
